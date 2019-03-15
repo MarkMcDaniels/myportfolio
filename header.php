@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Web Developer">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="main.js"></script>
 </head>
 <body <?php body_class(); ?>>
@@ -23,15 +24,15 @@
                         'theme_location' => 'main-menu'
                     ]);
                 ?>
-            </nav>
-        <div id="content" class="site-content">
+                <a id="payment" href="#">Make a Payment</a>
+        </nav>
+        
         <header id="masthead" class="site-header" role="banner">
-            <p id="test1">test1</p>
-            <p id="test2">test2</p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+          
+            <p id="phrase">I strive to deliver quality code, on<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time, and at a reasonable price.</p>
+        
+            <div id="face"></div>
+
+            
         </header>
+        <div id="content" class="site-content">
