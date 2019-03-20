@@ -45,8 +45,6 @@ a {
 header {
     background-image: url("assets/images/nightSky.png");
     background-repeat: no-repeat;
-    
-    /*background-size: 100%;*/
     background-size: cover;
     min-height: 300px;
     width: 100%;
@@ -84,7 +82,7 @@ header {
 #phrase {
     color: white;
     font-size:2rem;
-    margin-left: -10%;
+    
 }
 
 #face {
@@ -93,7 +91,7 @@ header {
   
   background-color: #bbb;
   border-radius: 50%;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 
@@ -156,6 +154,56 @@ header {
 }
 
 /*
+    --------------- Resume section ------------------
+*/
+#resume-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    
+}
+#resume-labels {
+    
+    display: flex;
+    justify-content: center;
+    
+}
+
+#tech {
+    margin-left: 10%;
+}
+
+#resume-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    
+    padding: 0px;
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+#resume-content h4 {
+    display: grid;
+    justify-items: center;
+}
+
+#resume-content .div-img {
+    display: grid;
+    justify-items: center;
+}
+
+
+#pdf-link {
+    color: red;
+}
+
+.tech-article img {
+    width: 64px;
+    height: auto
+}
+
+/*
     ---------------  Contact section -----------------
 */
 
@@ -181,5 +229,5 @@ header {
 }
 
 .control-label {
-    color:white;
+    color: white;
 }
