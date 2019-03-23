@@ -49,7 +49,29 @@
                     </a>
             </div>
             </div>
+            
         </div><!-- end of projects-content -->
+        <div id="hr-line"></div>
+        <div id="codepen-block">
+            <div id="fcc-labels">
+                <div id="ffc-logo"><img src="<?php echo get_template_directory_uri(  );?>/assets/images/freecodecamp-logo.png" alt="free code camp logo"></div>
+                <h3>Freecodecamp Certifications and Projects: </h3>
+            </div>
+            <div id="fcc-content">
+                <div>
+                    <p>Each Freecodecamp certificate is considered 300 hours of coursework.</p>
+                    <ul>
+                        <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/responsive-web-design">Responsive Web Design</a></li>
+                        <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/javascript-algorithms-and-data-structures">Javascript Algorithms and Data Structures</a></li>
+                        <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/front-end-libraries">Front End Libraries</a></li>
+                    </ul>
+
+                </div>
+                <div>
+                    <span class="fab fa-codepen"></span>
+                </div>
+            </div>
+        </div>
     </div><!--- end of projects-wrapper -->
     <div id="resume-wrapper">
         <div id="resume-labels">
@@ -137,6 +159,5 @@
             <?php echo Caldera_Forms::render_form( "CF5c8d7b2477311" ); ?>
         </div><!-- end of contact-content -->
     </div><!-- end of contact-wrapper -->
-    <h2>index.php</h2>
 
 <?php get_footer();?>
