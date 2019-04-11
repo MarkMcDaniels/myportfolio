@@ -47,15 +47,21 @@ a {
 }
 
 header {
-    background-image: url("assets/images/nightSky.png");
+    /*background-image: url("assets/images/nightSky.png");*/
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 300px;
     width: 100%;
-    height: auto;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* space */
+    background-color: black;
+    background: radial-gradient(
+    90% 35% at 50% bottom,
+    #666, #222
+    );
 
 }
 
@@ -82,11 +88,17 @@ header {
     float: right;
 }
 
+#canvas-overlay {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    margin-left: 35%;
+}
 
 #phrase {
     color: white;
     font-size:2rem;
-    
+    z-index: 1;
 }
 
 #face {
@@ -95,13 +107,23 @@ header {
   
   background-color: #bbb;
   border-radius: 50%;
-  margin-left: 20%;
+  margin-left: 23%;
+  z-index: 1;
 }
 
+/*
+    ------------------- space and stars ----------------
+*/
+
+#stars {
+    width: 100%;
+    height: 300px;
+}
 
 /*
     -------------------- projects area ------------------
 */
+
 
 #projects-wrapper {
     width: 100%;
@@ -113,17 +135,19 @@ header {
     text-align: center;
     justify-content: center;
     margin: 0px;
-    padding: 20px 0px 20px 0px;
+    padding: 30px 0px 30px 0px;
     color: #333333;
     
     
 }
 
+
+
 #projects-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
-    grid-column-gap: 50px;
+    grid-column-gap: 10%;
     justify-content: center;
     padding: 0px;
     width: 75%;
@@ -132,11 +156,34 @@ header {
     
 }
 
+.project-images {
+    display: grid;
+    width: 280px;
+    padding: 0px;
+    margin: 0px;
+    
+    
+}
+
+.project-images img {
+    /* original image size is 420x500 */
+    border: 2px solid #333333;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    justify-items: center;
+    width: 280px;
+    border-radius: 10px 10px 0px 0px;
+}
+
 .project-grid-item {
     display: flex;
     flex-direction: column;
     margin: 0px;
-    
+    width: 283px;
+    height: auto;
 }
 .project-grid-item span {
     font-size: 1.5rem;
@@ -153,7 +200,31 @@ header {
 .project-grid-item p {
     font-size: 1.0rem;
     height: 100%;
-    padding: 0px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    margin-top: 0px;
+    border: 2px solid #333333;
+    border-top-style: none;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+#app-p{
+    background-color: #008080ff;
+    color: white;
+}
+
+#site-p {
+    background-color: #f68b1fff;
+    color: white;
+}
+
+#theme-p {
+    /*background-color: #0086ffff;*/
 }
 
 .project-grid-item-icons {
@@ -177,7 +248,14 @@ header {
 
 #fcc-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+#ffc-logo {
+    display: flex;
+    flex-direction: column;
 }
 
 #fcc-content a {
@@ -185,23 +263,48 @@ header {
     
 }
 
-#ffc-logo img {
+#fcc-certs a {
+    color: #006400;
+    
+}
+
+#fcc-logo img {
     width: 48px;
     height: auto;
     padding-right: 10px;
 }
 
-#fcc-labels {
+#fcc-certs {
     display: flex;
     margin-top: 60px;
+    
+    flex-direction: column;
     
 }
 
 #codepen-block {
     margin: 0 auto;
-    width: 75%;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    padding-bottom: 10px;
+    
+}
+
+#codepen-logo span {
+    padding-right: 8px;
+    font-size: 3rem;
+    color: black;
+}
+
+#codepen-logo {
     display: flex;
-    flex-direction: column;
+    
+}
+
+.labels-adjuster {
+    display: flex;
 }
 
 /*

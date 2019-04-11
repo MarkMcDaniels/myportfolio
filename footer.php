@@ -1,4 +1,5 @@
         </div> <!-- end of content div -->
+        <?php wp_footer(); ?>
     <footer>
         <div id="footer-text">
             <h5>Wordpress theme created by Mark McDaniels</h5>
@@ -6,7 +7,7 @@
         </div>
 
 
-    <?php wp_footer(); ?>
+    
     </footer>
 </div> <!-- end of page div -->
 </body>

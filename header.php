@@ -28,11 +28,13 @@
         </nav>
         
         <header id="masthead" class="site-header" role="banner">
-          
-            <p id="phrase">I strive to deliver quality code, on<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time, and at a reasonable price.</p>
-        
-            <div id="face"></div>
-
+            <canvas id="stars" height="300">
+            </canvas>
+            <div id="canvas-overlay">
+                <p id="phrase">I strive to deliver quality code, on<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time, and at a reasonable price.</p>
+            
+                <div id="face"></div>
+            </div><!-- end of canvas-overlay -->
             
         </header>
         <div id="content" class="site-content">

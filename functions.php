@@ -26,10 +26,9 @@
 
 
     // Add CSS
-
     function myportfolio_enqueue_styles(){
 
-        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri(  ) . '/style.css', [], time(), 'all' );
+        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], time(), 'all');
     }
 
     add_action('wp_enqueue_scripts', 'myportfolio_enqueue_styles', 10);
@@ -39,3 +38,11 @@
     register_nav_menus( [
         'main-menu' => esc_html__( 'Main Menu', 'myportfolio' )
     ] );
+
+    // Add scripts
+    function myportfolio_enqueue_scripts(){
+        // dependency for jquery. Part of core wp
+        wp_enqueue_script( 'theme-js', get_stylesheet_directory_uri(). '/assets/js/theme.js', ['jquery'], time(), true  );
+    }
+
+    add_action('wp_enqueue_scripts', 'myportfolio_enqueue_scripts' );

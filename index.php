@@ -4,10 +4,13 @@
         <div id="projects-content">
             
             <div class="project-grid-item">
-                <div></div>
-                <h3>The Hushed App</h3>
-                <p>
-                    The hushed app is a simple way to silence your phone for a meeting or class. After the time is up it turns all your notifications back on. Android phones don't currently have this as an option. I built one, and offered it to others for free.
+                <div id="hushed-app" class="project-images"><img src="<?php echo get_template_directory_uri(  );?>/assets/images/hushed-app-projects.png" alt="hushed app project image">
+            
+                
+                </div>
+                
+                <p id="app-p">
+                    The hushed app silences your phone for a meeting or class. After the time is up it turns all your notifications back on. Android phones don't currently have this as an option.
                 </p>
                 <div class="project-grid-item project-grid-item-icons">
                     <a href="https://play.google.com/store/apps/details?id=com.hushedapp.hushed&hl=en">
@@ -20,9 +23,11 @@
 
             </div>
             <div class="project-grid-item">
-                <div></div>
-                <h3>Hushed Website</h3>
-                <p>
+                <div id="hushed-site" class="project-images">
+                <img src="<?php echo get_template_directory_uri(  );?>/assets/images/hushed-site-projects.png" alt="hushed site project image">
+                </div>
+                
+                <p id="site-p">
                     A responsive website for the Hushed App.
                 </p>
                 <div class="project-grid-item project-grid-item-icons">
@@ -35,11 +40,13 @@
             </div>
             </div>
             <div class="project-grid-item">
-                <div></div>
-                <h3>Portfolio Theme</h3>
-                <p>
+                <div id="spacedev-theme" class="project-images"><img src="<?php echo get_template_directory_uri(  );?>/assets/images/spacedev-theme-projects.png" alt="spacedev project image">
+            
+                </div>
+                <p id="theme-p">
                     An in place editable Wordpress Theme for designers, and developers with Woocommerce payment capabilities.
                 </p>
+                
                 <div class="project-grid-item project-grid-item-icons">
                     <a href="#">
                         <span class="fa fa-link"></span>
@@ -53,22 +60,40 @@
         </div><!-- end of projects-content -->
         <div id="hr-line"></div>
         <div id="codepen-block">
-            <div id="fcc-labels">
-                <div id="ffc-logo"><img src="<?php echo get_template_directory_uri(  );?>/assets/images/freecodecamp-logo.png" alt="free code camp logo"></div>
-                <h3>Freecodecamp Certifications and Projects: </h3>
-            </div>
-            <div id="fcc-content">
-                <div>
-                    <p>Each Freecodecamp certificate is considered 300 hours of coursework.</p>
-                    <ul>
-                        <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/responsive-web-design">Responsive Web Design</a></li>
-                        <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/javascript-algorithms-and-data-structures">Javascript Algorithms and Data Structures</a></li>
-                        <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/front-end-libraries">Front End Libraries</a></li>
-                    </ul>
+            <div id="fcc-certs">
+                <div id="fcc-logo">
+                    <div class="labels-adjuster">
+                        <div><img src="<?php echo get_template_directory_uri(  );?>/assets/images/freecodecamp-logo.png" alt="free code camp logo"></div>
+                        <h3>Freecodecamp Certifications: </h3>
 
+                    </div>
+                    <div>
+                        <p>Each Freecodecamp certificate is considered 300 hours of coursework.</p>
+                        <ul>
+                            <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/responsive-web-design">Responsive Web Design</a></li>
+                            <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/javascript-algorithms-and-data-structures">Javascript Algorithms and Data Structures</a></li>
+                            <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/front-end-libraries">Front End Libraries</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div id="fcc-content">
+                <div id="codepen-logo">
+                    <div class="labels-adjuster">
+                        <a href="https://codepen.io/MarkMcDaniels/#"><span id="code-pen-logo" class="fab fa-codepen"></span></a>
+                        <h3>My Freecodecamp projects on codepen:</h3>
+                    </div>
                 </div>
                 <div>
-                    <span class="fab fa-codepen"></span>
+                    <p>These projects are written in React, and a combination of front-end libraries.</p>
+                    <ul>
+                        <li><a href="https://codepen.io/MarkMcDaniels/pen/MZwVyG">Pomodoro Clock</a></li>
+                        <li><a href="https://codepen.io/MarkMcDaniels/pen/GYaYKg">Drum kit</a></li>
+                        <li><a href="https://codepen.io/MarkMcDaniels/pen/aQzORL">Calculator</a></li>
+                        <li><a href="https://codepen.io/MarkMcDaniels/pen/wYOWLK">Markdown Previewer</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
