@@ -1,5 +1,10 @@
 (function(){
-    console.log("i'm running");
+    /*
+     *
+     *  This manages the canvas and stars portion (my solution)
+     *
+     */
+    
     let width = document.getElementById('stars').clientWidth;
     let height = document.getElementById('stars').clientHeight;
     
@@ -87,6 +92,7 @@
     function draw(){
         
         let x, y, w, h;
+        // Clears full canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         for ( let star of smallStars){
@@ -176,3 +182,57 @@
     
     window.requestAnimationFrame(draw);
 })();
+
+
+(function($){
+    
+    // Manages editable portions.
+
+    $('.editable').click(
+
+    function(event){
+        // Grabs the parent.
+        let theParent =event.currentTarget.parentNode;
+        
+        let toEdit = $(theParent).attr('id');
+        console.log(toEdit);
+        let toLoadIn = document.getElementById(toEdit);
+      
+        switch(toEdit){
+
+            case 'face':
+                $(toLoadIn).load(edit_paths.face);
+                break;
+            
+            
+            case 'edit-project-one':
+                $(toLoadIn).load(edit_paths.project_one);
+                break;
+            
+
+            case 'edit-project-two':
+                $(toLoadIn).load(edit_paths.project_two);
+                break;
+                
+            
+            case 'edit-project-three':
+                $(toLoadIn).load(edit_paths.project_three);
+                break;
+
+
+            case 'hide-codepen-block':
+                $(toLoadIn).load(edit_paths.fcc);
+                break;
+
+
+            default:
+                break;
+
+        }
+
+    });
+
+    
+    
+
+})(jQuery);

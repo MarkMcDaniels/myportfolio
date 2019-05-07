@@ -1,17 +1,34 @@
 <?php   get_header(); ?>
     <div id="projects-wrapper">
         <h1 id="projects">Projects</h1>
+        <h3 id="projects-small">Projects</h3>
         <div id="projects-content">
             
-            <div class="project-grid-item">
-                <div id="hushed-app" class="project-images"><img src="<?php echo get_template_directory_uri(  );?>/assets/images/hushed-app-projects.png" alt="hushed app project image">
+            <div id="project-one" class="project-grid-item">
+                <div id="edit-project-one"><?php 
+                    if(is_user_logged_in()){
+                        get_template_part('template-parts/edit');
+                    }
+                ?>
+                </div>
+                <?php
+                    
+                    $project1 = get_option('project_one');
+                    $picName1 = $project1['pic_name'];
+                    $p1Descr = $project1['description'];
+                    $p1Title = $project1['title'];
+                ?>
+
+                <div id="hushed-app" class="project-images"><img src="<?php echo get_template_directory_uri(  );?>/assets/images/<?php echo $picName1; ?>" alt="first project image"><!-- hushed-app-projects.png -->
             
                 
                 </div>
-                
-                <p id="app-p">
-                    The hushed app silences your phone for a meeting or class. After the time is up it turns all your notifications back on. Android phones don't currently have this as an option.
+                <p id="app-small-title" class="project-small-title"><?php echo $p1Title; ?></p><!-- The Hushed App -->
+                <p id="app-p"><!--
+                    The hushed app silences your phone for a meeting or class. After the time is up it turns all your notifications back on. Android phones don't currently have this as an option.-->
+                    <?php echo $p1Descr; ?>
                 </p>
+                
                 <div class="project-grid-item project-grid-item-icons">
                     <a href="https://play.google.com/store/apps/details?id=com.hushedapp.hushed&hl=en">
                         <span class="fab fa-google-play"></span>
@@ -22,14 +39,32 @@
                 </div>
 
             </div>
-            <div class="project-grid-item">
+            <div id="project-two" class="project-grid-item">
+                <div id="edit-project-two"><?php 
+                        if(is_user_logged_in()){
+                            get_template_part('template-parts/edit');
+                        }
+                    ?>
+                </div>
+                <?php
+                    
+                    $project2 = get_option('project_two');
+                    $picName2 = $project2['pic_name'];
+                    $p2Descr = $project2['description'];
+                    $p2Title = $project2['title'];
+
+                ?>
+
                 <div id="hushed-site" class="project-images">
-                <img src="<?php echo get_template_directory_uri(  );?>/assets/images/hushed-site-projects.png" alt="hushed site project image">
+                <img src="<?php echo get_template_directory_uri(  );?>/assets/images/<?php echo $picName2; ?>" alt="second project image">
                 </div>
                 
+                <p id="site-small-title" class="project-small-title"><!-- The Hushed Site --> <?php echo $p2Title ?></p>
                 <p id="site-p">
-                    A responsive website for the Hushed App.
+                    <!--A responsive website for the Hushed App.-->
+                    <?php echo $p2Descr; ?>
                 </p>
+                
                 <div class="project-grid-item project-grid-item-icons">
                     <a href="https://thehushedapp.com">
                         <span class="fa fa-link"></span>
@@ -39,13 +74,34 @@
                     </a>
             </div>
             </div>
-            <div class="project-grid-item">
-                <div id="spacedev-theme" class="project-images"><img src="<?php echo get_template_directory_uri(  );?>/assets/images/spacedev-theme-projects.png" alt="spacedev project image">
+            <div id="project-three" class="project-grid-item">
+                <div id="edit-project-three"><?php 
+                        if(is_user_logged_in()){
+                            get_template_part('template-parts/edit');
+                        }
+                    ?>
+                </div>
+
+                <?php
+                    
+                    $project3 = get_option('project_three');
+                    $picName3 = $project3['pic_name'];
+                    $p3Descr = $project3['description'];
+                    $p3Title = $project3['title'];
+
+                ?>
+
+                <div id="spacedev-theme" class="project-images"><img src="<?php echo get_template_directory_uri(  );?>/assets/images/<?php echo $picName3; ?>" alt="third project image">
             
                 </div>
-                <p id="theme-p">
-                    An in place editable Wordpress Theme for designers, and developers with Woocommerce payment capabilities.
+                
+                <p id="theme-small-title" class="project-small-title"><!--This WordPress Theme-->
+                <?php $p3Title; ?></p>
+                <p id="theme-p"><!-- 
+                    An in place editable Wordpress Theme for designers, and developers with Woocommerce payment capabilities. -->
+                    <?php echo $p3Descr; ?>
                 </p>
+                
                 
                 <div class="project-grid-item project-grid-item-icons">
                     <a href="#">
@@ -58,46 +114,25 @@
             </div>
             
         </div><!-- end of projects-content -->
-        <div id="hr-line"></div>
-        <div id="codepen-block">
-            <div id="fcc-certs">
-                <div id="fcc-logo">
-                    <div class="labels-adjuster">
-                        <div><img src="<?php echo get_template_directory_uri(  );?>/assets/images/freecodecamp-logo.png" alt="free code camp logo"></div>
-                        <h3>Freecodecamp Certifications: </h3>
-
-                    </div>
-                    <div>
-                        <p>Each Freecodecamp certificate is considered 300 hours of coursework.</p>
-                        <ul>
-                            <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/responsive-web-design">Responsive Web Design</a></li>
-                            <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/javascript-algorithms-and-data-structures">Javascript Algorithms and Data Structures</a></li>
-                            <li><a href="https://www.freecodecamp.org/certification/markmcdaniels/front-end-libraries">Front End Libraries</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-            
-            <div id="fcc-content">
-                <div id="codepen-logo">
-                    <div class="labels-adjuster">
-                        <a href="https://codepen.io/MarkMcDaniels/#"><span id="code-pen-logo" class="fab fa-codepen"></span></a>
-                        <h3>My Freecodecamp projects on codepen:</h3>
-                    </div>
-                </div>
-                <div>
-                    <p>These projects are written in React, and a combination of front-end libraries.</p>
-                    <ul>
-                        <li><a href="https://codepen.io/MarkMcDaniels/pen/MZwVyG">Pomodoro Clock</a></li>
-                        <li><a href="https://codepen.io/MarkMcDaniels/pen/GYaYKg">Drum kit</a></li>
-                        <li><a href="https://codepen.io/MarkMcDaniels/pen/aQzORL">Calculator</a></li>
-                        <li><a href="https://codepen.io/MarkMcDaniels/pen/wYOWLK">Markdown Previewer</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div id="hr-line">
         </div>
+        <div id="codepen-block">
+            <div id="hide-codepen-block">
+            <?php 
+                if(is_user_logged_in()){
+                    get_template_part('template-parts/edit');
+                }
+            ?>
+            </div>
+            <?php 
+                $hidden = get_option( 'fcc_block');
+                if ($hidden === 'false') {
+                    get_template_part('template-parts/fcc-codeblock');
+                }
+            ?>
+        </div><!-- end of codepen block -->
     </div><!--- end of projects-wrapper -->
+    <div id="resume-block">
     <div id="resume-wrapper">
         <div id="resume-labels">
             <h1 id="resume">Resume: <a id="pdf-link" href="#"><span class="far fa-file-pdf"></span></a></h1>
@@ -178,6 +213,7 @@
             </article>
         </div>
     </div><!-- end of resume-wrapper -->
+    </div><!-- end of resume block -->
     <div id="contact-wrapper">
         <div id="contact-content">
             <h1>Contact Me</h1>
