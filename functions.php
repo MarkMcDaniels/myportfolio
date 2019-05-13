@@ -50,12 +50,15 @@
                 'project_one' => _(get_template_directory_uri(  ) . '/template-parts/edit-project-one.php'),
                 'project_two' => _(get_template_directory_uri(  ) . '/template-parts/edit-project-two.php'),
                 'project_three' => _(get_template_directory_uri(  ) . '/template-parts/edit-project-three.php'),
-                'fcc' => _(get_template_directory_uri(  ) . '/template-parts/fcc.php'
+                'fcc' => _(get_template_directory_uri(  ) . '/template-parts/fcc.php'),
+                'fcc_hidden' => get_option('fcc_block')
     
                 )
-            )
+            
             
         );
+        
+
     }
 
     add_action('wp_enqueue_scripts', 'myportfolio_enqueue_scripts' );

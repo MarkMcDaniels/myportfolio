@@ -119,13 +119,27 @@
         <div id="codepen-block">
             <div id="hide-codepen-block">
             <?php 
+                $hidden = get_option( 'fcc_block');
+                
                 if(is_user_logged_in()){
-                    get_template_part('template-parts/edit');
+                    //get_template_part('template-parts/edit');
+                    if($hidden === 'true') {
+                        get_template_part('template-parts/fcc-hidden');
+                        echo "<script>
+                                jQuery('#hr-line').css('display', 'none');
+                            </script>";
+                    } else {
+                        
+                        get_template_part('template-parts/fcc');
+                        echo "<script>
+                                jQuery('#hr-line').css('display', 'flex');
+                            </script>";
+                    }
                 }
             ?>
             </div>
             <?php 
-                $hidden = get_option( 'fcc_block');
+                
                 if ($hidden === 'false') {
                     get_template_part('template-parts/fcc-codeblock');
                 }

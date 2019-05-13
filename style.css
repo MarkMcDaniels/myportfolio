@@ -489,6 +489,15 @@ footer a {
     border-radius: 10px;
 }
 
+.edit-projects input {
+    width: 95%;
+    
+}
+
+.edit-projects textarea {
+    width: 95%;
+}
+
 .modal-req {
     text-align: center;
     border-bottom-style: solid;
@@ -496,6 +505,7 @@ footer a {
     border-bottom-width: 1px;
     padding-bottom: 10px;
     margin-top: 5px;
+    font-size: 1.5rem;
 }
 
 #face-path {
@@ -547,6 +557,7 @@ footer a {
     margin-top: 5px;
     text-align: center;
     border-radius: initial;
+    font-size: 0.8rem;
 }
 
 .pop-up input {
@@ -559,6 +570,15 @@ footer a {
 
 #hide-codepen-block .editable {
     margin-top: 20px;
+}
+
+#fcc-hidden form {
+    background-color: white;
+    margin-top: 5px;
+}
+
+#fcc-hidden {
+    padding-top: 4px;
 }
 
 

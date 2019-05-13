@@ -47,7 +47,11 @@
                     break;
 
                 case 'fcc-block':
-                    update_option('fcc_block', 'true', '', yes);
+                    if(isset($_POST['fcc_hide'])) {
+                        update_option('fcc_block', 'true', '', yes);
+                    } else {
+                        update_option( 'fcc_block', 'false', "", yes);
+                    }
                     break;
                 
                 default:

@@ -187,16 +187,16 @@
 (function($){
     
     // Manages editable portions.
-
     $('.editable').click(
 
     function(event){
         // Grabs the parent.
         let theParent =event.currentTarget.parentNode;
-        
+        console.log(theParent);
         let toEdit = $(theParent).attr('id');
         console.log(toEdit);
         let toLoadIn = document.getElementById(toEdit);
+
       
         switch(toEdit){
 
@@ -221,7 +221,8 @@
 
 
             case 'hide-codepen-block':
-                $(toLoadIn).load(edit_paths.fcc);
+                $('#fcc-hidden').css('display', 'flex');
+                
                 break;
 
 
